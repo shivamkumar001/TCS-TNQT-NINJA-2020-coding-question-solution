@@ -1,4 +1,4 @@
-# Explanation : absolute difference of sum of even and sum of odd number places. length of input might be maximum 100
+ # Explanation : absolute difference of sum of even and sum of odd number places. length of input might be maximum 100
 ''' input_case:1 
     4258
     output_case:1
@@ -14,15 +14,13 @@ n=int(input())
 a=[]
 odd=0
 even=0
+y=n
 for _ in range(100):
-    x=n%10
-    y=n/10
-    n=y
-    a.append(x)
+    y=y/10
+    a.append(y%10)
     if(y==0):
         break
 a.reverse()
-print(a)
 for i in range(len(a)):
     if(i%2==0):
         odd+=a[i]
